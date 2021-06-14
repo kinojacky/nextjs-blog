@@ -1,4 +1,4 @@
 module.exports = {
-  basePath: '/nextjs-blog',
-  assetPrefix: '/nextjs-blog'
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || ""
 };

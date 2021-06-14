@@ -1,17 +1,17 @@
 import Head from 'next/head'
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Home() {
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={prefix + "/favicon.ico"} />
       </Head>
 
       <main>
-        <h1 className="title">
-          Finally using the Github Action
-        </h1>
+        <h1 className="title">Finally using the Github Action</h1>
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
@@ -54,8 +54,8 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
+          Powered by{" "}
+          <img src={prefix + "/vercel.svg"} alt="Vercel" className="logo" />
         </a>
       </footer>
 
@@ -205,5 +205,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
